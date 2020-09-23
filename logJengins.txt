@@ -1,0 +1,62 @@
+Started by user Kirill Pavlovich
+Running as SYSTEM
+Building in workspace C:\Users\Kirill\.jenkins\workspace\Jenkins_app
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/Pavlovich-kll/Jenkins.git
+ > git.exe init C:\Users\Kirill\.jenkins\workspace\Jenkins_app # timeout=10
+Fetching upstream changes from https://github.com/Pavlovich-kll/Jenkins.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.26.2.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/Pavlovich-kll/Jenkins.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/Pavlovich-kll/Jenkins.git # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision 4d87ccea43b72f04b418b744a3f05c66f643ef1e (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 4d87ccea43b72f04b418b744a3f05c66f643ef1e # timeout=10
+Commit message: "changed gitignor"
+First time build. Skipping changelog.
+[Jenkins_app] $ cmd.exe /C "C:\Users\Kirill\.jenkins\tools\hudson.tasks.Maven_MavenInstallation\Maven\bin\mvn.cmd package && exit %%ERRORLEVEL%%"
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ---------------------< Intensive:Andersen_trainee >---------------------
+[INFO] Building Andersen_trainee 1.0-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Andersen_trainee ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Kirill\.jenkins\workspace\Jenkins_app\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ Andersen_trainee ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to C:\Users\Kirill\.jenkins\workspace\Jenkins_app\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Andersen_trainee ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\Kirill\.jenkins\workspace\Jenkins_app\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ Andersen_trainee ---
+[INFO] No sources to compile
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ Andersen_trainee ---
+[INFO] No tests to run.
+[INFO]
+[INFO] --- maven-war-plugin:3.3.1:war (default-war) @ Andersen_trainee ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [Andersen_trainee] in [C:\Users\Kirill\.jenkins\workspace\Jenkins_app\target\Andersen_trainee-1.0-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Building war: C:\Users\Kirill\.jenkins\workspace\Jenkins_app\target\Andersen_trainee-1.0-SNAPSHOT.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.693 s
+[INFO] Finished at: 2020-09-23T15:39:16+03:00
+[INFO] ------------------------------------------------------------------------
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying C:\Users\Kirill\.jenkins\workspace\Jenkins_app\target\Andersen_trainee-1.0-SNAPSHOT.war to container Tomcat 8.x Remote with context null
+  [C:\Users\Kirill\.jenkins\workspace\Jenkins_app\target\Andersen_trainee-1.0-SNAPSHOT.war] is not deployed. Doing a fresh deployment.
+  Deploying [C:\Users\Kirill\.jenkins\workspace\Jenkins_app\target\Andersen_trainee-1.0-SNAPSHOT.war]
+Finished: SUCCESS
